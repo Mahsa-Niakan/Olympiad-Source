@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="NCode" ColumnName="NCode" />
+          <ScalarProperty Name="Father" ColumnName="Father" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="TotalTime" ColumnName="TotalTime" />
+          <ScalarProperty Name="TotalMark" ColumnName="TotalMark" />
+          <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="ScorePercentage" ColumnName="ScorePercentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Group)">
+        <MappingFragment StoreEntitySet="GroupSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Exam)">
+        <MappingFragment StoreEntitySet="ExamSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="QId" ColumnName="QId" />
+          <ScalarProperty Name="QNumber" ColumnName="QNumber" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WinQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WinQuestion)">
+        <MappingFragment StoreEntitySet="WinQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WordQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WordQuestion)">
+        <MappingFragment StoreEntitySet="WordQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcelQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ExcelQuestion)">
+        <MappingFragment StoreEntitySet="ExcelQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerPointQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PowerPointQuestion)">
+        <MappingFragment StoreEntitySet="PowerPointQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WindowsTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WindowsTheory)">
+        <MappingFragment StoreEntitySet="WindowsTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WordTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WordTheory)">
+        <MappingFragment StoreEntitySet="WordTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcelTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ExcelTheory)">
+        <MappingFragment StoreEntitySet="ExcelTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerPointTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PowerPointTheory)">
+        <MappingFragment StoreEntitySet="PowerPointTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HardwareQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.HardwareQuestion)">
+        <MappingFragment StoreEntitySet="HardwareQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

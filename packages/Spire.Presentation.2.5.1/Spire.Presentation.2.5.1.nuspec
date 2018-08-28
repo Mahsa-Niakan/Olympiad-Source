@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Spire.Presentation</id>
+    <version>2.5.1</version>
+    <title>Spire.Presentation</title>
+    <authors>E-iceblue</authors>
+    <owners>E-iceblue</owners>
+    <licenseUrl>http://www.e-iceblue.com/Knowledgebase/Licensing/License-Agreement.html</licenseUrl>
+    <projectUrl>http://www.e-iceblue.com/Introduce/presentation-for-net-introduce.html</projectUrl>
+    <iconUrl>http://www.e-iceblue.com/images/product_logo/product_buy/PresentationNET.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Spire.Presentation for .NET is a professional PowerPoint® compatible component that enables developers to create, read, write, and modify PowerPoint® documents from any .NET(C#, VB.NET, ASP.NET) platform. As an independent PowerPoint .NET component, Spire.Presentation for .NET doesn't need Microsoft PowerPoint installed on the machine.
+
+Spire.Presentation for .NET support PPT, PPS, PPTX and PPSX presentation formats. It provides functions such as managing text, image, shapes, tables, animations, audio and video on slides. It also support exporting presentation slides to EMF, JPG, PDF format etc.</description>
+    <summary>A powerpoint component which enables developers to  to create, read, write, and modify PowerPoint documents from any .NET(C#, VB.NET, ASP.NET) platform</summary>
+    <releaseNotes>Spire.Presentation 2.5
+
+
+    Fixes the issue that caused bullet point at the beginning of the text.
+    Fixes the issue where the HasDataTable property of the chart didn't work.
+    Fixes the issue that caused "String can not be empty" exception when access data behind this chart.
+    Fixes the issue that file is broken and needs to be open in repair mode when add a slide and save to another file then open this file in MS Power Point.
+
+
+Spire.Presentation 2.4.27
+
+Fixes the issue that caused extra bullet point at the beginning of the text.
+Fixes the issue that caused the content incorrect when converts Presentation slides to PDF.
+
+Spire.Presentation 2.4.21
+Fixes the issue where slide animations were not preserved when save .ppt to other formats.
+Fixes the issue that caused the content incorrect when convert PPT to image.
+Fixes the issue that caused the content lost when convert PPT to PDF.
+Fixes the issue where it is unable to create a slide when the presentation is opened from a .pptx that has a Master Slide.
+Fixes the issue that caused some saved documents can't be opened.
+
+
+Spire.Presentation 2.4
+Fix the issue where the content displayed incorrectly when converted PPT to Image.
+Resolve the issue that caused the content incorrect when split one PPT to multiple PPT files.
+Fix the issue where the chart title was changed when saved the chart to Image.
+Fix the issue that caused the chart lost when convert .ppt to .pdf.
+
+Spire.Presentation 2.3
+Fixes the issue that caused the project not to be run after compiled when convert ppt slide to image.
+Fixes the issue where the series in charts does not get proper indexes.
+
+Spire.Presentation 2.2.22
+Adds new feature to convert the shape objects in slide to image.
+Adds new override method to set whether the media object is embeded or not when append media.
+Fixes the issue where the title of Secondary Axis was unable to set when create new secondry axis.
+
+Spire.Presentation 2.2.17
+Add new feature to enable developers to load .pps format document and save to .ppsx format document.
+Add new feature to create, save, extract, and edit SmartArt.
+Add new feature to convert the presentation slide to EMF image.
+Add new property of chart to enable protecting the data of the chart.
+
+Spire.Presentation 2.2.1
+Starts to support  let a new series use the secondary value axis on chart.
+
+Release version of Spire.Presentation 2.2
+
+Spire.Presentation 2.1.7
+Spire.Presentation starts to support convert PowerPoint documents into XPS format.
+Spire.Presentation starts to support to set percentage number format for the axis value of chart.
+Fix the issue that using TickMarkType.TickMarkNone; is not able to remove the tick marks of chart.
+
+Spire.Presentation 2.1.3
+Add a new feature to adjust the position of data labels of series.
+Fix the error "Object reference not set to an instance of an object." when change the text of series labels.
+
+Spire.Presentation 2.1
+Add a new feature to get chart from its group.
+
+Spire.Presentation 2.0.18
+Add new feature to set width and height of ChartLegend/PlotArea and the font of ChartTitle in chart.
+Fix the issue that extra data is added in pie chart.</releaseNotes>
+    <copyright>Copyright © 2016 e-iceblue. All Rights Reserved.</copyright>
+    <language>en-US</language>
+    <tags>PPT PPTX PPS PPSX PDF Powerpoint Image EMF JPEG PNG</tags>
+  </metadata>
+</package>

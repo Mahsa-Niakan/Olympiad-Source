@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Spire.XLS</id>
+    <version>7.9.17</version>
+    <title>Spire.XLS for .NET</title>
+    <authors>E-iceblue</authors>
+    <owners>E-iceblue</owners>
+    <licenseUrl>http://www.e-iceblue.com/Knowledgebase/Licensing/License-Agreement.html</licenseUrl>
+    <projectUrl>http://www.e-iceblue.com/Introduce/excel-for-net-introduce.html</projectUrl>
+    <iconUrl>http://www.e-iceblue.com/images/product_logo/product_buy/xlsnet.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Spire.XLS for .NET is a professional .NET Excel component to enables developers to generate, write, edit and save Excel files with C# and Visual Basic in .NET 2.0, .NET 3.5, .NET 4.0, .NET 4.0 ClientProfile, and .NET 4.5
+Spire.XLS for .NET also enables developers to convert Excel to other popular formats, such as PDF, XML, HTML, CSV, Image format etc. And, it supports developers to export data from database to Excel or import data from Excel to datatable. 
+With Spire.XLS for .NET, developers can create any types of ASP.NET web responses and WinForms applications to operate Excel files.</description>
+    <summary>a professional Excel component to enables developers to generate, write, edit and save Excel files in .NET 2.0, .NET 3.5, .NET 4.0, .NET 4.0 ClientProfile, and .NET 4.5.
+Spire.XLS for .NET also enables developers to convert Excel to other popular formats, such as PDF, XML, HTML, CSV, Image format etc. And, it supports developers to export data from database to Excel or import data from Excel to datatable.</summary>
+    <releaseNotes>Spire.XLS 7.9.17
+Add new feature to set the IconSetType of conditional formatting.
+Fixes the issue where the extra chart sheet is included when converting to PDF.
+Fixes the issue where the hidden sheet is included when converting to PDF.
+
+Spire.XLS 7.9
+Add new method to customize data label position.
+Add new method to set the position of the comment.
+Fixes the issue that caused the text font in the textbox bold when convert to PDF/XPS.
+Fixes the issue that caused the TextRotationAngle of PrimaryCategoryAxis not working when converts to PDF.
+Resolves the issue where the category label in chart is incorrect when convert to PDF.
+Fixes the issue that caused the exception when combine multiple Excel files.
+Resolves the issue that caused OverflowException when load Excel file.
+Fixes the issue that caused shape lost when convert sheet to Image.
+Fixes the issue that caused the richtext formatting lost when convert to Image.
+Fixes the issues where the label colors and positions in images are not the same as in charts when save the charts from sheets as images.
+Fixes the issue where the spreadsheet showed a right parenthesis on all fields when select the whole spreadsheet and click on the Comma button to format numbers with commas.
+Fixes the issue that cause unusual formula calculation.
+    Fixes the issue where the category labels color in chart cannot changed.
+Fixes the issue caused formatting Date not working in "dd/MM/yyyy" Format.
+Fixes the issue caused exception when loading worksheet has password protected.
+
+
+
+Spire.XLS 7.8.64
+Add the clone method for style.
+Add the ShowLeaderLines property to add label leader line to a stacked bar chart.
+Fixes the issue where the custom style lost when saves as .xls file.
+Fixes the issue that caused the content incorrect when converts to PDF.
+Fixes the issue where the font color changed when copy into another worksheet.
+Resolves the issue that caused the rgbColor exception when load.
+
+Spire.XLS 7.8.43
+Add new feature to set the background color of legend in a chart.
+Add new options for header and footer.
+Add new property to set the line weight.
+Fixes the issue that caused conditional Formatting not working when converts excel to PDF.
+Fixes the issue that caused some documents fails to load. 
+Fixes the issue where the content is not converted properly when convert excel to PDF.
+Fixes the issue where the formula's results render incorrectly when converting to PDF.
+Fixes the issue where the image render incorrectly when convert Excel to PDF.
+
+Spire.XLS 7.8.26
+Fixes the issue that caused the CSV document failed to load.
+Fixes the issue that caused the .xlsx document failed to load.
+Fixes the issue that caused incorrect formatting when convert .xls to .xlsx.
+Fixes the issue that caused GDI+ error when save .xlsx as Images.
+
+Spire.XLS 7.8
+Add new feature to add a picture to chart at a location, and then assign a hyperlink to it. 
+Add new feature to set dataField position in pivotTable.
+Fixes the issue where Strong encryption algorithms are not supported when load encrypted Excel document.
+Fixes the issue that caused Excel document to PDF conversion failed.
+Fixes the issue that caused content incorrect when convert Excel document to PDF.
+Reduce the generated PDF document size when convert Excel document to PDF.
+Addresses the issue that caused the ArgumentOutOfRangeException when insert image into footer.
+Fixes the issue where it is unable to read complete Excel file.
+Resolves the issue that caused the xlsm/xlsx document failed to load.
+Fixes the issue that caused the Exception that "The number must be between 10 and 400" when load .xlsx file.
+Fixes the issue that caused IndexOutOfRangeException when load .xlsx file via stream.
+Reduce the elapsed time while convert Excel document to image.
+
+
+Spire.XLS 7.6.54
+Add the following new property to optimize the time consumption when load Excel document.
+Fix the issue where the Excel document couldn't be saved when set Pivot Field FormatType as PercentageOfParent.
+Fix the issue where the CalculateAllValue method didn't work.
+Fix the issue that caused some excel documents failed to load.
+Fix the issue where AutoFitColumn method caused the value of some columns displayed incorrectly.
+Fix the issue where the ExportDataTable method failed to work.
+Fix the issue that caused incorrect result when convert XLS to PDF.
+Fix the issue where the color of cell has conditional formatting was converted incorrectly when convert XLS to PDF.
+
+Spire.XLS 7.6.43
+Add new method as below to save sheet to EMF image. 
+Add new property of pivot table that enables setting the classic layout for pivot table.
+Fixes an issue where the series' colors of chart lost when converted .xls to .xlsx.
+Fixes an issue where an exception threw that startIndex cannot be larger than the length of string when save .xlsx to .xls.
+Fixes an issue where the output image is incorrect when used the book.Worksheets[string sheetName].SaveToImage(int firstRow, int firstColumn, int lastRow, int lastColumn) method to save sheet to image.
+Fixes an issue where the data format wasn't correct when converted .xlsx to pdf in invariant Culture.
+Fixes an issue where the date format wasn't correct when converted .xlsx to pdf in invariant Culture.
+Fixes an issue where an exception threw that Specified argument was out of the range of valid values while loading .xlsx document.
+Fixes an issue where the color of cell displayed incorrect when set several cells' color at one time.
+
+
+
+Spire.XLS 7.6.33
+Add new feature to only encrypt with password.
+Add new feature to set the offset of image when the fill way of chart is picture fill.
+Fix the issue that "Zip exception" when loading the CSV file using LoadFromStream method.
+Fix the issue that the feature to lock/unlock cell doesn't work.
+Fix the issue that the content of chart is incorrect when .xls to .xlsx conversion.
+Fix the issue that all datalable fonts will change when setting individual datalable's font.
+Fix the issue that the format of the cell will change when merging multiple files.
+
+
+Spire.XLS 7.6.21
+Add new feature to set the shapeFillType as No Fill.
+Add new feature to hide chart title.
+Spire.XLS 7.6.1
+Fix the issue that row height turned smaller when converting .xlsx to pdf.
+Fix the error "Invalid PrintOrderType string val" caused when converting xlsx to pdf.
+Fix the issue that borders were added when converting .xlsx to pdf.
+Fix the issue that page size was changed when converting .xlsx to pdf.
+Fix the error "Object reference not set to an instance of an object." caused when converting .xlsx to pdf.
+Fix the error "Unknown version" caused when setting excel version to Version2013.
+Fix the issue that it was very slow on merging cells, when setting Row.Style.WrapText = true.
+
+Spire.XLS 7.5.19
+Convert .xls to .xlsm and keep macros starts to support.
+Fix the issue that Excel 2013 does not recognize the file when saving as stream with Excel2013 format and giving the file .xlsx extension.
+Fix the error"Value was either too large or too small for UIni16" when loading an .xlsx file.
+Fix the error"An XML error has occurred" when loading an .xlsx file.
+
+Spire.XLS 7.5.17
+Fix the issue that the location of image was changed when converting excel to Html.
+Fix the error "Value cannot be null" when saving excel to html stream.
+Fix the issue that the size of image was changed when adding image into .xls.
+Fix the color didn't work when setting Color.FromArgb(69, 107, 61) for textbox.
+
+Spire.XLS 7.5.16
+Converting Excel to XPS starts to support by Spire.XLS.
+Fix the issue that borders of merged cells were missing when converting excel to pdf.
+Fix the issue that file was protected when converting .xls to .xlsx.
+
+Spire.XLS 7.5.12
+Fix the error "Invalid Data Source" when converting Excel to PDF.
+Fix the issue that the format of a cell cannot be assigned to other cells.
+
+Spire.XLS 7.5.7
+Add new feature to embed image into HTML when converting Excel to HTML by setting HTMLOptions.Default.ImageEmbedded = true;
+Add new feature to set size of plotArea and legend of chart.
+Fix the issue that the printout came out somewhat blurry when printing excel file.
+Fix the error "NullReferenceException" when loading excel file.
+Fix the issue that the position of image was incorrect when converting Excel to HTML.
+Fix the issue that got rows count of sheet was incorrect using int count=sheet.Rows.Length;
+
+
+Spire.XLS 7.5.5
+
+New features:
+Add new feature to read value in cell of pivot table.
+Add new feature to fold and unfold the fields of pivot table.
+Add new feature to insert few blank rows as a header rows in the sheet in which pivot table is created.
+
+Bug solutions:
+
+Fix the issue that the shape is lost when loading and saving .xlsx file.
+Fix the error "Specified argument was out of the range of valid values" occurred when converting excel to pdf.
+Fix the error "Arithmetic operation resulted in an overflow." occurred when saving .xls file.
+Fix the issue that it took a long time to calculation all value of excel file.
+Fix the error "unknown formula IFERROR" occurred when getting the value of ACCRINT formula using FormulaStringValue method.
+
+Spire.XLS 7.5.3
+Add a new feature to auto fit all columns of pivot table.
+Add a new feature to set "Enable show details", "Refresh data when opening the file" for data of Pivot table.
+Add a new feature to print Excel file.
+Fix the issue that all icons of conditional formatting were lost when opening and saving .xlsx file.
+Fix the issue that auto fit function didn't work in converting Excel to PDF.
+
+Spire.XLS 7.5
+Fix the error "Arithmetic operation resulted in an overflow" occurred when copying data from a sheet to another sheet of the same workbook.</releaseNotes>
+    <copyright>Copyright © 2016 e-iceblue. All Rights Reserved.</copyright>
+    <language>en-US</language>
+    <tags>.xlsb .xlsx .xlsm .ods Excel worksheet spreadsheet xls .xml .csv excel to xps</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Spire.XLS" targetFramework=".NETFramework2.0, .NETFramework3.5, .NETFramework4.0, .NETFramework4.0-Client" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

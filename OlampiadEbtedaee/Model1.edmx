@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="UserSet" EntityType="Model1.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GroupSet" EntityType="Model1.Store.GroupSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExamSet" EntityType="Model1.Store.ExamSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WinQuestionSet" EntityType="Model1.Store.WinQuestionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WordQuestionSet" EntityType="Model1.Store.WordQuestionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExcelQuestionSet" EntityType="Model1.Store.ExcelQuestionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PowerPointQuestionSet" EntityType="Model1.Store.PowerPointQuestionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WindowsTheorySet" EntityType="Model1.Store.WindowsTheorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="WordTheorySet" EntityType="Model1.Store.WordTheorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExcelTheorySet" EntityType="Model1.Store.ExcelTheorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PowerPointTheorySet" EntityType="Model1.Store.PowerPointTheorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HardwareQuestionSet" EntityType="Model1.Store.HardwareQuestionSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserExam" Association="Model1.Store.UserExam">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Exam" EntitySet="ExamSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserGroup" Association="Model1.Store.UserGroup">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Group" EntitySet="GroupSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NCode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Father" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SchoolName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TotalTime" Type="int" Nullable="false" />
+    <Property Name="TotalMark" Type="int" Nullable="false" />
+    <Property Name="ExamDate" Type="datetime" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="ScorePercentage" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExamSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QId" Type="int" Nullable="false" />
+    <Property Name="QNumber" Type="int" Nullable="false" />
+    <Property Name="Mark" Type="int" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WinQuestionSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WordQuestionSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExcelQuestionSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PowerPointQuestionSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="int" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WindowsTheorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Correct" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WordTheorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Correct" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExcelTheorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Correct" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PowerPointTheorySet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="Correct" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HardwareQuestionSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicOne" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicTwo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChoiceThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicThree" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Voice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="int" Nullable="false" />
+    <Property Name="ChoiceFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PicFour" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Correct" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Repeatitive" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="UserExam">
+    <End Role="User" Type="Model1.Store.UserSet" Multiplicity="1" />
+    <End Role="Exam" Type="Model1.Store.ExamSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Exam">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserGroup">
+    <End Role="User" Type="Model1.Store.UserSet" Multiplicity="*" />
+    <End Role="Group" Type="Model1.Store.GroupSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="GroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserSet" EntityType="Model1.User" />
+          <EntitySet Name="GroupSet" EntityType="Model1.Group" />
+          <EntitySet Name="ExamSet" EntityType="Model1.Exam" />
+          <AssociationSet Name="UserExam" Association="Model1.UserExam">
+            <End Role="User" EntitySet="UserSet" />
+            <End Role="Exam" EntitySet="ExamSet" />
+          </AssociationSet>
+          <AssociationSet Name="UserGroup" Association="Model1.UserGroup">
+            <End Role="User" EntitySet="UserSet" />
+            <End Role="Group" EntitySet="GroupSet" />
+          </AssociationSet>
+          <EntitySet Name="WinQuestionSet" EntityType="Model1.WinQuestion" />
+          <EntitySet Name="WordQuestionSet" EntityType="Model1.WordQuestion" />
+          <EntitySet Name="ExcelQuestionSet" EntityType="Model1.ExcelQuestion" />
+          <EntitySet Name="PowerPointQuestionSet" EntityType="Model1.PowerPointQuestion" />
+          <EntitySet Name="WindowsTheorySet" EntityType="Model1.WindowsTheory" />
+          <EntitySet Name="WordTheorySet" EntityType="Model1.WordTheory" />
+          <EntitySet Name="ExcelTheorySet" EntityType="Model1.ExcelTheory" />
+          <EntitySet Name="PowerPointTheorySet" EntityType="Model1.PowerPointTheory" />
+          <EntitySet Name="HardwareQuestionSet" EntityType="Model1.HardwareQuestion" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="LastName" Type="String" Nullable="false" />
+          <Property Name="NCode" Type="String" Nullable="false" />
+          <Property Name="Father" Type="String" Nullable="false" />
+          <Property Name="SchoolName" Type="String" Nullable="false" />
+          <Property Name="ClassName" Type="String" Nullable="false" />
+          <Property Name="TotalTime" Type="Int32" Nullable="false" />
+          <Property Name="TotalMark" Type="Int32" Nullable="false" />
+          <Property Name="ExamDate" Type="DateTime" Nullable="false" />
+          <Property Name="Gender" Type="String" Nullable="false" />
+          <NavigationProperty Name="Exam" Relationship="Model1.UserExam" FromRole="User" ToRole="Exam" />
+          <NavigationProperty Name="Group" Relationship="Model1.UserGroup" FromRole="User" ToRole="Group" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="ScorePercentage" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Model1.UserGroup" FromRole="Group" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Exam">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="QId" Type="Int32" Nullable="false" />
+          <Property Name="QNumber" Type="Int32" Nullable="false" />
+          <Property Name="Mark" Type="Int32" Nullable="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Model1.UserExam" FromRole="Exam" ToRole="User" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="UserExam">
+          <End Type="Model1.User" Role="User" Multiplicity="1" />
+          <End Type="Model1.Exam" Role="Exam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Exam">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserGroup">
+          <End Type="Model1.User" Role="User" Multiplicity="*" />
+          <End Type="Model1.Group" Role="Group" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="WinQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WordQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExcelQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PowerPointQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="Time" Type="Int32" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WindowsTheory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="ChoiceOne" Type="String" Nullable="false" />
+          <Property Name="PicOne" Type="String" Nullable="false" />
+          <Property Name="ChoiceTwo" Type="String" Nullable="false" />
+          <Property Name="PicTwo" Type="String" Nullable="false" />
+          <Property Name="ChoiceThree" Type="String" Nullable="false" />
+          <Property Name="PicThree" Type="String" Nullable="false" />
+          <Property Name="ChoiceFour" Type="String" Nullable="false" />
+          <Property Name="PicFour" Type="String" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Correct" Type="String" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WordTheory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="ChoiceOne" Type="String" Nullable="false" />
+          <Property Name="PicOne" Type="String" Nullable="false" />
+          <Property Name="ChoiceTwo" Type="String" Nullable="false" />
+          <Property Name="PicTwo" Type="String" Nullable="false" />
+          <Property Name="ChoiceThree" Type="String" Nullable="false" />
+          <Property Name="PicThree" Type="String" Nullable="false" />
+          <Property Name="ChoiceFour" Type="String" Nullable="false" />
+          <Property Name="PicFour" Type="String" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Correct" Type="String" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExcelTheory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="ChoiceOne" Type="String" Nullable="false" />
+          <Property Name="PicOne" Type="String" Nullable="false" />
+          <Property Name="ChoiceTwo" Type="String" Nullable="false" />
+          <Property Name="PicTwo" Type="String" Nullable="false" />
+          <Property Name="ChoiceThree" Type="String" Nullable="false" />
+          <Property Name="PicThree" Type="String" Nullable="false" />
+          <Property Name="ChoiceFour" Type="String" Nullable="false" />
+          <Property Name="PicFour" Type="String" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Correct" Type="String" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PowerPointTheory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="ChoiceOne" Type="String" Nullable="false" />
+          <Property Name="PicOne" Type="String" Nullable="false" />
+          <Property Name="ChoiceTwo" Type="String" Nullable="false" />
+          <Property Name="PicTwo" Type="String" Nullable="false" />
+          <Property Name="ChoiceThree" Type="String" Nullable="false" />
+          <Property Name="PicThree" Type="String" Nullable="false" />
+          <Property Name="ChoiceFour" Type="String" Nullable="false" />
+          <Property Name="PicFour" Type="String" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="Correct" Type="String" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HardwareQuestion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" Nullable="false" />
+          <Property Name="ChoiceOne" Type="String" Nullable="false" />
+          <Property Name="PicOne" Type="String" Nullable="false" />
+          <Property Name="ChoiceTwo" Type="String" Nullable="false" />
+          <Property Name="PicTwo" Type="String" Nullable="false" />
+          <Property Name="ChoiceThree" Type="String" Nullable="false" />
+          <Property Name="PicThree" Type="String" Nullable="false" />
+          <Property Name="Voice" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+          <Property Name="ChoiceFour" Type="String" Nullable="false" />
+          <Property Name="PicFour" Type="String" Nullable="false" />
+          <Property Name="Correct" Type="String" Nullable="false" />
+          <Property Name="Repeatitive" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="NCode" ColumnName="NCode" />
+          <ScalarProperty Name="Father" ColumnName="Father" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="TotalTime" ColumnName="TotalTime" />
+          <ScalarProperty Name="TotalMark" ColumnName="TotalMark" />
+          <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="ScorePercentage" ColumnName="ScorePercentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Group)">
+        <MappingFragment StoreEntitySet="GroupSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Exam)">
+        <MappingFragment StoreEntitySet="ExamSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="QId" ColumnName="QId" />
+          <ScalarProperty Name="QNumber" ColumnName="QNumber" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WinQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WinQuestion)">
+        <MappingFragment StoreEntitySet="WinQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WordQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WordQuestion)">
+        <MappingFragment StoreEntitySet="WordQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcelQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ExcelQuestion)">
+        <MappingFragment StoreEntitySet="ExcelQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerPointQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PowerPointQuestion)">
+        <MappingFragment StoreEntitySet="PowerPointQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WindowsTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WindowsTheory)">
+        <MappingFragment StoreEntitySet="WindowsTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WordTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.WordTheory)">
+        <MappingFragment StoreEntitySet="WordTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExcelTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.ExcelTheory)">
+        <MappingFragment StoreEntitySet="ExcelTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerPointTheorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PowerPointTheory)">
+        <MappingFragment StoreEntitySet="PowerPointTheorySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HardwareQuestionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.HardwareQuestion)">
+        <MappingFragment StoreEntitySet="HardwareQuestionSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="ChoiceOne" ColumnName="ChoiceOne" />
+          <ScalarProperty Name="PicOne" ColumnName="PicOne" />
+          <ScalarProperty Name="ChoiceTwo" ColumnName="ChoiceTwo" />
+          <ScalarProperty Name="PicTwo" ColumnName="PicTwo" />
+          <ScalarProperty Name="ChoiceThree" ColumnName="ChoiceThree" />
+          <ScalarProperty Name="PicThree" ColumnName="PicThree" />
+          <ScalarProperty Name="Voice" ColumnName="Voice" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="ChoiceFour" ColumnName="ChoiceFour" />
+          <ScalarProperty Name="PicFour" ColumnName="PicFour" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="Repeatitive" ColumnName="Repeatitive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
